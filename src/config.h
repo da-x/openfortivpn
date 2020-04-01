@@ -18,6 +18,7 @@
 #ifndef OPENFORTIVPN_CONFIG_H
 #define OPENFORTIVPN_CONFIG_H
 
+#include <sys/param.h>
 #include <netinet/in.h>
 
 #include <errno.h>
@@ -87,6 +88,7 @@ struct vpn_config {
 	unsigned int  otp_delay;
 	char		*pinentry;
 	char		realm[FIELD_SIZE + 1];
+	char		ifup_script[MAXPATHLEN + 1];
 
 	int	set_routes;
 	int	set_dns;
